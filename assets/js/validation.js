@@ -28,7 +28,7 @@ function checkemail()
 }
     
 $(document).ready(function(){
-    
+	   
 	$(document).on('click',"#submit1",function(e){
         
         e.preventDefault();
@@ -40,6 +40,8 @@ $(document).ready(function(){
 		var number=$("#number").val();
 		var gender=$("#gender").val();
 		var dob=$("#dob").val();
+
+		
 		
 		var count=0;
 		if (name == null || name == "") {
@@ -57,7 +59,7 @@ $(document).ready(function(){
 			$("#username_error").html("");
 		}
 		if (email == null || email == "") {
-			emailError = "Please enter your email";
+				var emailError = "Please enter your email";
             $("#email_error").html(emailError);
 			count++;
 		}
@@ -68,7 +70,7 @@ $(document).ready(function(){
         console.log($("#editform").length);
         if($("#editform").length == 0) {
             if (upassword == null || upassword == "") {
-                upasswordError = "Please enter your password";
+                	var upasswordError = "Please enter your password";
                 $("#upassword_error").html(upasswordError);
                 count++;
             }
@@ -76,7 +78,7 @@ $(document).ready(function(){
                 $("#upassword_error").html("");
             }
             if (cpassword == null || cpassword == "") {
-                cpasswordError = "Please re-enter your password";
+                	var cpasswordError = "Please re-enter your password";
                 $("#cpassword_error").html(cpasswordError);
                 count++;
             }
@@ -86,7 +88,7 @@ $(document).ready(function(){
         }
         
 		if (number == null || number == "") {
-			numberError = "Please enter your number";
+				var numberError = "Please enter your number";
             $("#number_error").html(numberError);
 			count++;
 		}
@@ -94,20 +96,20 @@ $(document).ready(function(){
 			$("#number_error").html("");
 		}
 		if (gender == null || gender == "") {
-		genderError = "Please choose your gender";
-            $("#gender_error").html(genderError);
+			var genderError = "Please choose your gender";
+            $("#gender_Error").html(genderError);
 			count++;
 		}
 		else{
-			$("#gender_error").html("");
+			$("#gender_Error").html("");
 		}
 		if (dob == null || dob == "") {
-			dobError = "Please enter your dob";
-            $("#dob_error").html(dob_error);
+			var dobError = "Please enter your dob";
+            $("#dob_Error").html(dobError);
 			count++;
 		}
 		else{
-            $("#dob_error").html("");
+            $("#dob_Error").html("");
 		
 		}
 		if(count >0){

@@ -1,11 +1,18 @@
-
 <?php
+session_start();
+if (!isset($_SESSION['username']))
+{
+print('<Script>alert(" You have not logged in.");</script>');
+print "<script>";
+    print "self.location='login.php';";
+    print "</script>";
+
+}
 include "header.php";
 include "footer.php";
 include('connection.php');
 $query = mysqli_query($connection, "SELECT * FROM udetails where soft_delete <> 1 order by updated_at desc");
-
- ?>
+?>
 
 
   
@@ -201,15 +208,12 @@ $query = mysqli_query($connection, "SELECT * FROM udetails where soft_delete <> 
 <script src="assets/js/datatables.js" type="text/javascript"></script>
 <script src="assets/js/core.js" type="text/javascript"></script> 
 <script>
-//$("#source").select2();
-//$("#source1").select2();
-//$("#source2").select2();
-//$("#source3").select2();
-//$("#source4").select2();
-
-
+$("#source").select2();
+$("#source1").select2();
+$("#source2").select2();
+$("#source3").select2();
+$("#source4").select2();
 </script>
 
 </body>
 </html>
-}

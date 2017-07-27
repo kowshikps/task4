@@ -1,7 +1,15 @@
 <?php
+session_start();
+if (!isset($_SESSION['username']))
+{
+print('<Script>alert(" You have not logged in.");</script>');
+print "<script>";
+    print "self.location='login.php';";
+    print "</script>";
+
+}
 include('header.php');
 include('footer.php');
-include('script.php');
 include('connection.php');
 
 if(mysqli_connect_errno)
@@ -91,7 +99,7 @@ $query = mysqli_query($connection, "SELECT * FROM udetails where id= " . $primar
                           <label class="col-sm-3  col-md-3 col-lg-3 col-xs-3 text-black semi-bold p-t-10 control-label">Mobile Number</label>
                           <div class="col-sm-9 col-md-9 col-lg-9 col-xs-9">
                             <div class="controls">
-                            <input type="text" name="number" id="number" value="<?php echo $number ?>" class="form-control input-sm" />
+                            <input type="text" name="number" id="number" value="<?php echo $number ?>" class="form-control input-sm"  onkeypress='return event.charCode >= 48 && event.charCode <= 57' />
                           </div><p id="number_error"> <br>
                           </div>
                         </div>

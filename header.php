@@ -38,11 +38,11 @@
       </div>
 
       <div class="header-quick-nav" > 
-        <a href="index.html"><img src="assets/img/logo.png" class="" alt=""  data-src="assets/img/logo.png" data-src-retina="assets/img/logo2x.png" width="237" height="60"/>
+        <a href="login.php"><img src="assets/img/logo.png" class="" alt=""  data-src="assets/img/logo.png" data-src-retina="assets/img/logo2x.png" width="237" height="60"/>
         </a>
         <div class="pull-left "> 
           <ul class="nav quick-section round-menu">
-            <li class="quicklinks"> <a href="#" class="" id="layout-condensed-toggle" >
+            <li class="quicklinks"> <a href="login.php" class="" id="layout-condensed-toggle" >
               <div class="fa fa-bars text-white top-menu-toggle-dark" style="font-size:16px;"></div>
               </a> 
             </li>
@@ -88,10 +88,10 @@
               <li class="quicklinks"> <span class="h-seperate"></span></li>
             </ul>
           <div class="chat-toggler">  
-            <a href="#" class="dropdown-toggle" id="user-options" data-placement="bottom"  data-content='' data-toggle="dropdown" data-original-title="Notifications">
+            <a href="login.php" class="dropdown-toggle" id="user-options" data-placement="bottom"  data-content='' data-toggle="dropdown" data-original-title="Notifications">
               <div class="user-details"> 
                 <div class="username">
-                  <span class="bold">Hi Kowshik </span>                  
+                  <span class="bold"> </span>                  
                 </div>            
               </div> 
               <div class="iconset top-down-arrow"></div>
@@ -99,7 +99,7 @@
             <ul class="dropdown-menu  pull-right" role="menu" aria-labelledby="user-options">
               <li><a href="profile.html"> My Account</a>
               </li>
-              <li><a href="index.php"><i class="fa fa-power-off"></i>&nbsp;&nbsp;Log Out</a></li>
+              <li><a href="login.php"><i class="fa fa-power-off"></i>&nbsp;&nbsp;Log Out</a></li>
             </ul>
             <div class="profile-pic"> 
               <img src="assets/img/profiles/avatar_small.png"  alt="" data-src="assets/img/profiles/avatar_small.png" data-src-retina="assets/img/profiles/avatar_small2x.png" width="35" height="35" /> 
@@ -108,7 +108,7 @@
           <ul class="nav quick-section">
                 <li class="quicklinks"> <span class="h-seperate"></span></li>
                 <li class="quicklinks">   
-                <a href="#"><div class="fa fa-power-off" style="font-size:16px;"></div></a></li>
+                <a href="logout.php"><div class="fa fa-power-off" style="font-size:16px;"></div></a></li>
             </ul>
         </div>
       </div> 
