@@ -25,7 +25,7 @@
           <img src="assets/img/logo2x.png"/>
           <hr class="m-t-10 m-b-5"/>
         </div>
-        <form id="login-form" class="login-form" action="user-management.html" method="post">
+        <form id="login-form" class="login-form" action="login-check.php" method="post">
               <div class="row-fluid ">
                 <h3>Login <span class="semi-bold">Here</span></h3>
 
@@ -36,7 +36,7 @@
                       <span class="arrow"></span>
                       <i class="fa fa-align-justify"></i>
                       </span>
-                      <input class="form-control" placeholder="someone@example.com" type="text">
+                      <input class="form-control" placeholder="someone@example.com" type="text" id="username" name="username">
                     </div>
                   </div>
                 </div>
@@ -47,7 +47,7 @@
                       <span class="arrow"></span>
                       <i class="fa fa-lock" style="font-size:20px"></i>
                       </span>
-                      <input class="form-control" placeholder="your password" type="password">
+                      <input class="form-control" placeholder="your password" type="password" id="password" name="password">
                     </div>
                   </div>
                 </div>
@@ -85,3 +85,4 @@
   </script>
 </body>
 </html>
+

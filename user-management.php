@@ -3,14 +3,7 @@
 include "header.php";
 include "footer.php";
 include('connection.php');
-include('script.php');
-if(mysqli_connect_errno)
-{
-	echo "error";
-}
-$query = mysqli_query($connection, "SELECT * FROM udetails order by ID ");
-$row = mysqli_fetch_array($query);
-
+$query = mysqli_query($connection, "SELECT * FROM udetails where soft_delete <> 1 order by updated_at desc");
 
  ?>
 
@@ -74,7 +67,7 @@ $row = mysqli_fetch_array($query);
                       <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                         <li><a href="#" data-toggle="modal" data-target="#assignmodal">Assign</a></li>
                         <li><a href=edit.php?id=<?php echo $id; ?> >Edit</a></li>
-                        <li><a href="#">Delete</a></li>
+                        <li><a href="delete.php?id=<?php echo $id; ?>">Delete</a></li>
                       </ul>
                     </div>
                   </td>
@@ -208,11 +201,11 @@ $row = mysqli_fetch_array($query);
 <script src="assets/js/datatables.js" type="text/javascript"></script>
 <script src="assets/js/core.js" type="text/javascript"></script> 
 <script>
-$("#source").select2();
-$("#source1").select2();
-$("#source2").select2();
-$("#source3").select2();
-$("#source4").select2();
+//$("#source").select2();
+//$("#source1").select2();
+//$("#source2").select2();
+//$("#source3").select2();
+//$("#source4").select2();
 
 
 </script>

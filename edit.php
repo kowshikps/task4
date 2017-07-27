@@ -16,8 +16,6 @@ $query = mysqli_query($connection, "SELECT * FROM udetails where id= " . $primar
  $username = $row['username'];
  $number = $row['number'];
  $email = $row['email'];
- $upassword = $row['upassword'];
- $cpassword = $row['cpassword'];
  $gender = $row['gender'];
  $dob = $row['dob'];
 
@@ -45,7 +43,7 @@ $query = mysqli_query($connection, "SELECT * FROM udetails where id= " . $primar
                 <div class="grid-body no-border"> 
                   <div class="row m-t-10">
                     <div class="col-md-12 col-sm-12 col-xs-12">
-                      <form  method="post" id="editform"  action="updateddata.php" >
+                      <form  method="post" id="editform"  action="updateddata.php">
 								<input type="hidden" name="id" value="<?php echo $id; ?>" id="id"  />
                        
                         <div class="form-group col-sm-12 col-md-12 col-lg-12 col-xs-12 no-padding no-margin">
@@ -69,15 +67,15 @@ $query = mysqli_query($connection, "SELECT * FROM udetails where id= " . $primar
                           <label class="col-sm-3 col-md-3 col-lg-3 col-xs-3 text-black semi-bold p-t-10 control-label">Email</label>
                           <div class="col-sm-9 col-md-9 col-lg-9 col-xs-9">
                             <div class="controls">
-                            <input type="email" name="email" id="email" class="form-control input-sm" value="<?php echo $email ?>"/><a href ="javascript:checkemail();"></a>
+                            <input type="email" name="email" id="email" class="form-control input-sm" value="<?php echo $email ?>"/>
                           </div>  <span id="email_error"></span><br>
                           </div>
                         </div>
                         <div class="form-group col-sm-12 col-md-12 col-lg-12 col-xs-12 no-padding no-margin">
-                          <label class="col-sm-3  col-md-3 col-lg-3 col-xs-3 text-black semi-bold p-t-10 control-label">Password</label><p id="name_error">
+                            <label class="col-sm-3  col-md-3 col-lg-3 col-xs-3 text-black semi-bold p-t-10 control-label">Password</label>
                           <div class="col-sm-9 col-md-9 col-lg-9 col-xs-9">
                             <div class="controls">
-                            <input type="password" name="upassword" id="upassword" class="form-control input-sm" value="<?php echo $upassword;  ?>" class="form-control input-sm" />
+                            <input type="password" name="upassword" id="upassword" class="form-control input-sm" class="form-control input-sm" />
                           </div><p id="upassword_error"> <br>
                           </div>
                         </div>
@@ -85,7 +83,7 @@ $query = mysqli_query($connection, "SELECT * FROM udetails where id= " . $primar
                           <label class="col-sm-3  col-md-3 col-lg-3 col-xs-3 text-black semi-bold p-t-10 control-label">Confirm Password</label>
                           <div class="col-sm-9 col-md-9 col-lg-9 col-xs-9" >
                             <div class="controls">
-                                     <input type="password" name="cpassword" id="cpassword" class="form-control input-sm" value="<?php echo $cpassword;  ?>" class="form-control input-sm" />
+                                     <input type="password" name="cpassword" id="cpassword" class="form-control input-sm" class="form-control input-sm" />
                           </div><p id="cpassword-error"> <br>
                           </div>
                         </div>
@@ -99,9 +97,9 @@ $query = mysqli_query($connection, "SELECT * FROM udetails where id= " . $primar
                         </div>
 						<div class="form-group col-sm-12 col-md-12 col-lg-12 col-xs-12 no-padding no-margin" >
                           <label class="col-sm-3  col-md-3 col-lg-3 col-xs-3 text-black semi-bold p-t-10 control-label" >Gender</label>
-                          <div class="col-sm-9 col-md-9 col-lg-9 col-xs-9 p-t-10 " >                            
-                            <input type="radio" name="gender" id="male" >Male	
-							<input type="radio" name="gender" id="female">Female
+                          <div class="col-sm-9 col-md-9 col-lg-9 col-xs-9 p-t-10 " >                                            
+                            <input type="radio" name="gender" id="gender" value="male" <?php if($gender == "male") echo "checked" ?>>Male	
+							<input type="radio" name="gender" id="gender" value="female" <?php if($gender == "female") echo "checked" ?>>Female
                           </div>	<p id="gender_error"> <br>
                         </div>
 						<div class="form-group col-sm-12 col-md-12 col-lg-12 col-xs-12 no-padding no-margin">
@@ -115,7 +113,7 @@ $query = mysqli_query($connection, "SELECT * FROM udetails where id= " . $primar
                         
                         <div class="form-actions ">  
                           <div class="pull-right p-t-10 p-r-15">
-                            <button type="submit" class="btn btn-green btn-cons" onsubmit="return getData()"><i class="icon-ok"> </i> Update</button>
+                            <button type="button" class="btn btn-green btn-cons" id="submit1"><i class="icon-ok"> </i> Update</button>
                             <button type="button" class="btn btn-white btn-cons">Cancel</button>
                           </div>
                         </div>
@@ -133,14 +131,15 @@ $query = mysqli_query($connection, "SELECT * FROM udetails where id= " . $primar
       </div>
     </div>
   </div>
-  <script src="assets/plugins/jquery-1.8.3.min.js" type="text/javascript"></script> 
-  <script src="assets/plugins/boostrapv3/js/bootstrap.min.js" type="text/javascript"></script> 
-  <script src="assets/plugins/breakpoints.js" type="text/javascript"></script> 
-  <script src="assets/plugins/jquery-unveil/jquery.unveil.min.js" type="text/javascript"></script> 
-  <script src="assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js" type="text/javascript"></script>
-  <script src="assets/plugins/pace/pace.min.js" type="text/javascript"></script>  
-  <script src="assets/plugins/jquery-numberAnimate/jquery.animateNumbers.js" type="text/javascript"></script>
-  <script src="assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
-  <script src="assets/js/core.js" type="text/javascript"></script> 
+    <script src="assets/plugins/jquery-1.8.3.min.js" type="text/javascript"></script> 
+    <script src="assets/plugins/boostrapv3/js/bootstrap.min.js" type="text/javascript"></script> 
+    <script src="assets/plugins/breakpoints.js" type="text/javascript"></script> 
+    <script src="assets/plugins/jquery-unveil/jquery.unveil.min.js" type="text/javascript"></script> 
+    <script src="assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js" type="text/javascript"></script>
+    <script src="assets/plugins/pace/pace.min.js" type="text/javascript"></script>  
+    <script src="assets/plugins/jquery-numberAnimate/jquery.animateNumbers.js" type="text/javascript"></script>
+    <script src="assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
+    <script src="assets/js/core.js" type="text/javascript"></script>
+  <script type="text/javascript" src="assets/js/validation.js" ></script>
 </body>
 </html>

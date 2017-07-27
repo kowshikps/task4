@@ -99,7 +99,7 @@
             <ul class="dropdown-menu  pull-right" role="menu" aria-labelledby="user-options">
               <li><a href="profile.html"> My Account</a>
               </li>
-              <li><a href="login.html"><i class="fa fa-power-off"></i>&nbsp;&nbsp;Log Out</a></li>
+              <li><a href="index.php"><i class="fa fa-power-off"></i>&nbsp;&nbsp;Log Out</a></li>
             </ul>
             <div class="profile-pic"> 
               <img src="assets/img/profiles/avatar_small.png"  alt="" data-src="assets/img/profiles/avatar_small.png" data-src-retina="assets/img/profiles/avatar_small2x.png" width="35" height="35" /> 

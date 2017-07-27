@@ -30,15 +30,15 @@ include('footer.php');
                           <div class="col-sm-9 col-md-9 col-lg-9 col-xs-9">
                             <div class="controls">
                             <input type="text" class="form-control input-sm" id="name" name="name" placeholder="eg: Ramesh Kumar" onkeypress=" return ((event.charCode >= 97 && event.charCode <= 122) || (event.charCode >= 65 && event.charCode <= 90) || event.charCode == 8 || event.charCode == 32)" />
-                          </div>
+                          </div> <p id="name_error"> <br>
                           </div>
                         </div>
                         <div class="form-group col-sm-12 col-md-12 col-lg-12 col-xs-12 no-padding no-margin">
                           <label class="col-sm-3  col-md-3 col-lg-3 col-xs-3 text-black semi-bold p-t-10 control-label">Username</label>
                           <div class="col-sm-9 col-md-9 col-lg-9 col-xs-9">
                             <div class="controls">
-                            <input type="text" class="form-control input-sm" id="user_name" name="user_name" placeholder="eg: rameshkumar " onkeypress=" return ((event.charCode >= 97 && event.charCode <= 122) || (event.charCode >= 65 && event.charCode <= 90) || event.charCode == 8 || event.charCode == 32)" />
-                          </div>
+                            <input type="text" class="form-control input-sm" id="username" name="username" placeholder="eg: rameshkumar " onkeypress=" return ((event.charCode >= 97 && event.charCode <= 122) || (event.charCode >= 65 && event.charCode <= 90) || event.charCode == 8 || event.charCode == 32)" />
+                          </div> <p id="username_error"> <br>
                           </div>
                         </div>
                         <div class="form-group col-sm-12 col-md-12 col-lg-12 col-xs-12 no-padding no-margin">
@@ -46,31 +46,31 @@ include('footer.php');
                           <div class="col-sm-9 col-md-9 col-lg-9 col-xs-9">
                             <div class="controls">
                             <input type="email" class="form-control input-sm" id="email" name="email"  placeholder="eg: xyz@example.com ">
-                          </div>
+                          </div> <p id="email_error"> <br>
                           </div>
                         </div>
                         <div class="form-group col-sm-12 col-md-12 col-lg-12 col-xs-12 no-padding no-margin">
                           <label class="col-sm-3  col-md-3 col-lg-3 col-xs-3 text-black semi-bold p-t-10 control-label">Password</label>
                           <div class="col-sm-9 col-md-9 col-lg-9 col-xs-9">
                             <div class="controls">
-                            <input type="password" class="form-control input-sm" id="password" name="password" >
-                          </div>
+                            <input type="password" class="form-control input-sm" id="upassword" name="upassword" >
+                          </div> <p id="upassword_error"> <br>
                           </div>
                         </div>
 						<div class="form-group col-sm-12 col-md-12 col-lg-12 col-xs-12 no-padding no-margin" >
                           <label class="col-sm-3  col-md-3 col-lg-3 col-xs-3 text-black semi-bold p-t-10 control-label">Confirm Password</label>
                           <div class="col-sm-9 col-md-9 col-lg-9 col-xs-9" >
                             <div class="controls">
-                            <input type="password" class="form-control input-sm" id="c_password" name="c_password"  >
-                          </div>
+                            <input type="password" class="form-control input-sm" id="cpassword" name="cpassword"  >
+                          </div><p id="cpassword_error"> <br>
                           </div>
                         </div>
 						<div class="form-group col-sm-12 col-md-12 col-lg-12 col-xs-12 no-padding no-margin">
                           <label class="col-sm-3  col-md-3 col-lg-3 col-xs-3 text-black semi-bold p-t-10 control-label">Mobile Number</label>
                           <div class="col-sm-9 col-md-9 col-lg-9 col-xs-9">
                             <div class="controls">
-                            <input type="text" class="form-control input-sm" id="mobile_no" name="mobile_no"  placeholder="eg: 0123456789 " onkeypress='return event.charCode >= 48 && event.charCode <= 57' />
-                          </div>
+                            <input type="text" class="form-control input-sm" id="number" name="number"  placeholder="eg: 0123456789 " onkeypress='return event.charCode >= 48 && event.charCode <= 57' />
+                          </div> <p id="number_error"> <br>
                           </div>
                         </div>
 						<div class="form-group col-sm-12 col-md-12 col-lg-12 col-xs-12 no-padding no-margin" >
@@ -78,20 +78,21 @@ include('footer.php');
                           <div class="col-sm-9 col-md-9 col-lg-9 col-xs-9 p-t-10 " >                            
                             <input type="radio" name="gender" id="gender" value="male" >Male	
 							<input type="radio" name="gender" id="gender" value="female">Female
-                          </div>
+                            </div>	<p id="gender_error"> <br>
+                            </div>
                         </div>
 						<div class="form-group col-sm-12 col-md-12 col-lg-12 col-xs-12 no-padding no-margin">
                           <label class="col-sm-3  col-md-3 col-lg-3 col-xs-3 text-black semi-bold p-t-10 control-label">Date of Birth</label>
                           <div class="col-sm-9 col-md-9 col-lg-9 col-xs-9">
                             <div class="controls">
                             <input type="text" class="form-control input-sm" id="dob" name="dob" >
-                          </div>
+                          </div><p id="dob_error"> <br>
                           </div>
                         </div>
                         
                         <div class="form-actions ">  
                           <div class="pull-right p-t-10 p-r-15">
-                            <button type="submit" class="btn btn-green btn-cons"  ><i class="icon-ok"></i> Add</button>
+                            <button type="button" class="btn btn-green btn-cons"  id="submit1"><i class="icon-ok"></i> Add</button>
                             <button type="button" class="btn btn-white btn-cons">Cancel</button>
                           </div>
                         </div>
@@ -118,5 +119,6 @@ include('footer.php');
   <script src="assets/plugins/jquery-numberAnimate/jquery.animateNumbers.js" type="text/javascript"></script>
   <script src="assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
   <script src="assets/js/core.js" type="text/javascript"></script> 
+  <script type="text/javascript" src="assets/js/validation.js" ></script>
 </body>
 </html>
