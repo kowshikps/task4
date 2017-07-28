@@ -43,10 +43,7 @@ $(document).ready(function(){
 		var gender=$("#gender").val();
 		var dob=$("#dob").val();
 
-		function validateEmail(email) {
-    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(email);
-}
+	
 		
 		var count=0;
 		if (name == null || name == "") {
@@ -159,4 +156,9 @@ $(document).ready(function(){
 			$('form').submit();
 		}
 	    });
+		$(document).on('click',"#cancel1",function(e){ 
+		window.location='http://localhost:8081/mywork/task4/user-management.php';
+      
+		
+		 });
 });
