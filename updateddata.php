@@ -14,7 +14,7 @@ $dob = $_POST['dob'];
 
 $date = date('Y-m-d H:i:s');
 if(empty($id) || empty($name) || empty($username) || empty($number) ||
-    empty($email) || empty($upassword) || empty($gender) || empty($dob))
+    empty($email) || empty($upassword) || empty($gender) || empty($dob)) //Backend validation to check if any field is empty
 {
     echo "You did not fill out the required fields.";
 	die();

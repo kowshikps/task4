@@ -1,7 +1,8 @@
 var x = false;
 
-function checkemail()
+function checkemail() //Function to check if email id already exist in database
 {
+				
     var emailid = $("#email").val();
     var id = $("#id").val();
     if (emailid)
@@ -28,8 +29,9 @@ function checkemail()
 }
     
 $(document).ready(function(){
+	
 	   
-	$(document).on('click',"#submit1",function(e){
+	$(document).on('click',"#submit1",function(e){ //On submit of user details validation for the same is done in this code
         
         e.preventDefault();
 		var name=$("#name").val();
@@ -41,7 +43,10 @@ $(document).ready(function(){
 		var gender=$("#gender").val();
 		var dob=$("#dob").val();
 
-		
+		function validateEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+}
 		
 		var count=0;
 		if (name == null || name == "") {
@@ -119,6 +124,8 @@ $(document).ready(function(){
                 $("#upassword_error").html("Passwords doesn't match");
             } else {
                 checkemail();
+				
+
                 if(x==true) {
                     $('form').submit();
                 } else {
@@ -127,7 +134,7 @@ $(document).ready(function(){
             }
 		}
     });
-	$(document).on('click',"#submit2",function(e){
+	$(document).on('click',"#submit2",function(e){ //On submit of login,validation is done 
 		e.preventDefault();
 		var username=$("#username").val();
 		var upassword=$("#password").val();

@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION['username']))
+if (!isset($_SESSION['username'])) //Session is set to check if only authorised users are trying to access this 
 {
 print('<Script>alert(" You have not logged in.");</script>');
 print "<script>";
@@ -8,9 +8,9 @@ print "<script>";
     print "</script>";
 
 }
-include "header.php";
+include "header.php"; 
 include('sidebar.php');
-include('connection.php');
+include('connection.php'); // Database connection 
 $query = mysqli_query($connection, "SELECT * FROM udetails where soft_delete <> 1 order by updated_at desc");
 ?>
 

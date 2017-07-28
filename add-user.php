@@ -35,7 +35,7 @@ include('sidebar.php');
                                             <div class="col-sm-9 col-md-9 col-lg-9 col-xs-9">
                                                 <div class="controls">
                                                     <input type="text" class="form-control input-sm" id="name" name="name" placeholder="eg: Ramesh Kumar" onkeypress=" return ((event.charCode >= 97 && event.charCode <= 122) || (event.charCode >= 65 && event.charCode <= 90) || event.charCode == 8 || event.charCode == 32)" />
-                                                </div> <p id="name_error"> <br>
+                                                </div> <p style="color:red;" id="name_error"> <br>
                                             </div>
                                         </div>
                                         <div class="form-group col-sm-12 col-md-12 col-lg-12 col-xs-12 no-padding no-margin">
@@ -43,7 +43,7 @@ include('sidebar.php');
                                             <div class="col-sm-9 col-md-9 col-lg-9 col-xs-9">
                                                 <div class="controls">
                                                     <input type="text" class="form-control input-sm" id="username" name="username" placeholder="eg: rameshkumar " onkeypress=" return ((event.charCode >= 97 && event.charCode <= 122) || (event.charCode >= 65 && event.charCode <= 90) || event.charCode == 8 || event.charCode == 32)" />
-                                                </div> <p id="username_error"> <br>
+                                                </div> <p style="color:red;" id="username_error"> <br>
                                             </div>
                                         </div>
                                         <div class="form-group col-sm-12 col-md-12 col-lg-12 col-xs-12 no-padding no-margin">
@@ -51,7 +51,7 @@ include('sidebar.php');
                                             <div class="col-sm-9 col-md-9 col-lg-9 col-xs-9">
                                                 <div class="controls">
                                                     <input type="email" class="form-control input-sm" id="email" name="email"  placeholder="eg: xyz@example.com ">
-                                                </div> <p id="email_error"> <br>
+                                                </div> <p style="color:red;" id="email_error"> <br>
                                             </div>
                                         </div>
                                         <div class="form-group col-sm-12 col-md-12 col-lg-12 col-xs-12 no-padding no-margin">
@@ -59,7 +59,7 @@ include('sidebar.php');
                                             <div class="col-sm-9 col-md-9 col-lg-9 col-xs-9">
                                                 <div class="controls">
                                                     <input type="password" class="form-control input-sm" id="upassword" name="upassword" >
-                                                </div> <p id="upassword_error"> <br>
+                                                </div> <p style="color:red;" id="upassword_error"> <br>
                                             </div>
                                         </div>
                                         <div class="form-group col-sm-12 col-md-12 col-lg-12 col-xs-12 no-padding no-margin" >
@@ -67,7 +67,7 @@ include('sidebar.php');
                                             <div class="col-sm-9 col-md-9 col-lg-9 col-xs-9" >
                                                 <div class="controls">
                                                     <input type="password" class="form-control input-sm" id="cpassword" name="cpassword"  >
-                                                </div><p id="cpassword_error"> <br>
+                                                </div><p style="color:red;" id="cpassword_error"> <br>
                                             </div>
                                         </div>
                                         <div class="form-group col-sm-12 col-md-12 col-lg-12 col-xs-12 no-padding no-margin">
@@ -75,7 +75,7 @@ include('sidebar.php');
                                             <div class="col-sm-9 col-md-9 col-lg-9 col-xs-9">
                                                 <div class="controls">
                                                     <input type="text" class="form-control input-sm" id="number" name="number"  placeholder="eg: 0123456789 " onkeypress='return event.charCode >= 48 && event.charCode <= 57' />
-                                                </div> <p id="number_error"> <br>
+                                                </div> <p style="color:red;" id="number_error"> <br>
                                             </div>
                                         </div>
                                         <div class="form-group col-sm-12 col-md-12 col-lg-12 col-xs-12 no-padding no-margin" >
@@ -85,7 +85,7 @@ include('sidebar.php');
                                                 <input type="radio" name="gender" id="gender" value="male" />Male	
                                                 <input type="radio" name="gender" id="gender" value="female"/>Female
 												</div>
-												<p id="gender_error"> 
+												<p style="color:red;" id="gender_error"> 
                                             </div>	
                                         </div>
                                
@@ -94,7 +94,7 @@ include('sidebar.php');
                                     <div class="col-sm-9 col-md-9 col-lg-9 col-xs-9">
                                         <div class="controls">
                                             <input type="text" class="form-control input-sm" id="dob" name="dob" placeholder="eg: yyyy-mm-dd" />
-                                        </div><p id="dob_Error"> <br>
+                                        </div><p style="color:red;" id="dob_Error"> <br>
                                     </div>
                                 </div>
 
