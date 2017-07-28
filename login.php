@@ -39,6 +39,7 @@
                       </span>
                       <input class="form-control" placeholder="someone@example.com" type="text" id="username" name="username">
                     </div>
+					<p id="username_error"> <br>
                   </div>
                 </div>
                 <div class="row form-group form-row">
@@ -50,6 +51,7 @@
                       </span>
                       <input class="form-control" placeholder="your password" type="password" id="password" name="password">
                     </div>
+						<p id="password_error"> <br>
                   </div>
                 </div>
               </div>
@@ -66,7 +68,7 @@
               </div>
           <div class="row">
             <div class="col-md-12">
-              <button class="btn btn-success btn-cons pull-right" type="submit">Login</button>
+              <button class="btn btn-success btn-cons pull-right" type="button" id="submit2">Login</button>
             </div>
           </div>
         </form>
@@ -81,6 +83,7 @@
   <script src="assets/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
   <script src="assets/js/login.js" type="text/javascript"></script>
   <script src="assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="assets/js/validation.js" ></script>
   <script>
   $(".select2").select2();
   </script>

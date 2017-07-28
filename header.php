@@ -91,7 +91,7 @@
             <a href="login.php" class="dropdown-toggle" id="user-options" data-placement="bottom"  data-content='' data-toggle="dropdown" data-original-title="Notifications">
               <div class="user-details"> 
                 <div class="username">
-                  <span class="bold"> </span>                  
+                  <span class="bold"> Hi Kowshik </span>                  
                 </div>            
               </div> 
               <div class="iconset top-down-arrow"></div>

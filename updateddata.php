@@ -13,6 +13,12 @@ $gender = $_POST['gender'];
 $dob = $_POST['dob'];
 
 $date = date('Y-m-d H:i:s');
+if(empty($id) || empty($name) || empty($username) || empty($number) ||
+    empty($email) || empty($upassword) || empty($gender) || empty($dob))
+{
+    echo "You did not fill out the required fields.";
+	die();
+}
 
 $query = mysqli_query($connection, "UPDATE udetails SET name = '$name',username = '$username', email = '$email', upassword = '$upassword',number= '$number',gender = '$gender',dob = '$dob',created_at = '$date', updated_at = '$date' WHERE id='$id'");
 if (mysqli_affected_rows() >= 1) {

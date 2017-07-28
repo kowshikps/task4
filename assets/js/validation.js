@@ -127,4 +127,29 @@ $(document).ready(function(){
             }
 		}
     });
+	$(document).on('click',"#submit2",function(e){
+		e.preventDefault();
+		var username=$("#username").val();
+		var upassword=$("#password").val();
+		var count=0;
+		if (username == null || username == "") {
+			var nameError = "Please enter your name";
+            $("#username_error").html(nameError);
+			count++;
+		}else{
+            $("#username_error").html("");
+		}
+		if (upassword == null || upassword == "") {
+			var passwordError = "Please enter your username";
+            $("#password_error").html(passwordError);
+			count++;
+		}else{
+			$("#password_error").html("");
+		}
+		if(count >0){
+			return false;
+		}else{
+			$('form').submit();
+		}
+	    });
 });

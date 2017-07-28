@@ -9,7 +9,7 @@ print "<script>";
 
 }
 include('header.php');
-include('footer.php');
+include('sidebar.php');
 include('connection.php');
 
 if(mysqli_connect_errno)

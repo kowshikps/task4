@@ -8,7 +8,7 @@ if (!isset($_SESSION['username']))
     print "</script>";
 }
 include('header.php');
-include('footer.php');
+include('sidebar.php');
 ?>
 <a href="#" class="scrollup">Scroll</a>
 <div class="page-content"> 
@@ -93,7 +93,7 @@ include('footer.php');
                                     <label class="col-sm-3  col-md-3 col-lg-3 col-xs-3 text-black semi-bold p-t-10 control-label">Date of Birth</label>
                                     <div class="col-sm-9 col-md-9 col-lg-9 col-xs-9">
                                         <div class="controls">
-                                            <input type="text" class="form-control input-sm" id="dob" name="dob" />
+                                            <input type="text" class="form-control input-sm" id="dob" name="dob" placeholder="eg: yyyy-mm-dd" />
                                         </div><p id="dob_Error"> <br>
                                     </div>
                                 </div>

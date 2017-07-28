@@ -13,6 +13,14 @@ $number = $_POST["number"];
 $dob = $_POST["dob"];
 $gender = $_POST["gender"];
 $date = date('Y-m-d H:i:s');
+
+
+if(empty($id) || empty($name) || empty($username) || empty($number) ||
+    empty($email) || empty($upassword) || empty($gender) || empty($dob))
+{
+    echo "You did not fill out the required fields.";
+	die();
+}
 $query = mysqli_query($connection, "INSERT into udetails(name,username,email,upassword,number,gender,dob,created_at,updated_at)  values ('$name','$username','$emailid','$upassword','$number','$gender','$dob','$date','$date')");
 
 

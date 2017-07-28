@@ -9,7 +9,7 @@ print "<script>";
 
 }
 include "header.php";
-include "footer.php";
+include('sidebar.php');
 include('connection.php');
 $query = mysqli_query($connection, "SELECT * FROM udetails where soft_delete <> 1 order by updated_at desc");
 ?>
