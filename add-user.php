@@ -103,7 +103,7 @@ if (!isset($_SESSION['username'])) {
                                                                     <label class="col-sm-3  col-md-3 col-lg-3 col-xs-3 text-black semi-bold p-t-10 control-label"  >Gender</label>
                                                                     <div class="col-sm-9 col-md-9 col-lg-9 col-xs-9 p-t-10 ">      
                                                                         <div class="controls" style="border: 0px !important;"   >                      
-                                                                            <input type="radio" name="gender" id="gender" value="male" />Male	
+                                                                            <input type="radio" name="gender" id="gender" value="male" checked/>Male	
                                                                             <input type="radio" name="gender" id="gender" value="female"/>Female
                                                                         </div>
                                                                         <span style="color:red;" id="gender_error"> </span>
