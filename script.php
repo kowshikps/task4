@@ -13,6 +13,7 @@
 <script type="text/javascript" src="assets/plugins/datatables-responsive/js/lodash.min.js"></script>
 <script src="assets/js/datatables.js" type="text/javascript"></script>
 <script src="assets/js/core.js" type="text/javascript"></script> 
+<script src="assets/js/validation.js" type="text/javascript"></script> 
 <script>
     $("#source").select2();
     $("#source1").select2();

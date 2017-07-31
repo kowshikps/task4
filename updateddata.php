@@ -1,5 +1,5 @@
 <?php
-include('connection.php');
+include('connection.php'); //Database connection is established
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 $id = $_POST['id'];
@@ -9,7 +9,7 @@ $number = $_POST['number'];
 $email = $_POST['email'];
 $upassword = $_POST['upassword'];
 $upassword = md5($upassword);
-$gender = $_POST['gender'];
+$gender = $_POST['gender'];l
 $dob = $_POST['dob'];
 
 $date = date('Y-m-d H:i:s');

@@ -1,8 +1,8 @@
 <?php
-session_start();
-include('header.php');
-include('sidebar.php');
-include('connection.php');
+session_start(); // To start session
+include('header.php'); //Includes header file
+include('sidebar.php'); //Includes sidebar code
+include('connection.php');// database connection is established
 include('script.php');
 if (!isset($_SESSION['username'])) {
     print('<Script>alert(" You have not logged in.");</script>');
@@ -80,7 +80,7 @@ $dob = $row['dob'];
                                                     <label class="col-sm-3  col-md-3 col-lg-3 col-xs-3 text-black semi-bold p-t-10 control-label">Username</label>
                                                     <div class="col-sm-9 col-md-9 col-lg-9 col-xs-9">
                                                         <div class="controls">
-                                                            <input type="text" name="username" id="username" class="form-control input-sm" value="<?php echo $username; ?>" onkeypress=" return ((event.charCode >= 97 && event.charCode <= 122) || (event.charCode >= 65 && event.charCode <= 90) || event.charCode == 8 || event.charCode == 32)"/>
+                                                            <input type="text" name="username" id="username" class="form-control input-sm" value="<?php echo $username; ?>" onkeypress=" return ((event.charCode >= 97 && event.charCode <= 122) || (event.charCode >= 65 && event.charCode <= 90) || event.charCode == 8 || event.charCode == 32)"/> 
                                                         </div><span style="color:red;" id="username_error"> </span> <br>
                                                     </div>
                                                 </div>

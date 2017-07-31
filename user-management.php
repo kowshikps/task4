@@ -1,16 +1,16 @@
 <?php
-session_start();
-include "header.php";
-include('sidebar.php');
+session_start();  // To start session
+include "header.php"; //Includes header file
+include('sidebar.php'); //Includes sidebar code
 include('script.php');
 include('connection.php'); // Database connection 
 if (!isset($_SESSION['username'])) { //Session is set to check if only authorised users are trying to access this 
-    print('<Script>alert(" You have not logged in.");</script>');
+    print('<Script>alert(" You have not logged in.");</script>'); 
     print "<script>";
     print "self.location='login.php';";
     print "</script>";
 }
-$query = mysqli_query($connection, "SELECT * FROM udetails where soft_delete <> 1 order by created_at desc");
+$query = mysqli_query($connection, "SELECT * FROM udetails where soft_delete <> 1 order by created_at desc"); 
 ?>
 <head>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
@@ -65,7 +65,7 @@ $query = mysqli_query($connection, "SELECT * FROM udetails where soft_delete <> 
                                 </thead>
                                 <tbody>
                                     <?php
-                                    while ($row = mysqli_fetch_array($query)) {
+                                    while ($row = mysqli_fetch_array($query)) { //Fetches data from database and displays it.
                                         $id = $row['id'];
                                         $name = $row['name'];
                                         $username = $row['username'];
