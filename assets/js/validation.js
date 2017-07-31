@@ -27,6 +27,11 @@ function checkemail() //Function to check if email id already exist in database
         });
     }
 }
+
+function validateEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+}
     
 $(document).ready(function(){
 	
@@ -121,16 +126,23 @@ $(document).ready(function(){
                 $("#upassword_error").html("Passwords doesn't match");
             } else {
                 checkemail();
-				
+				var y;
+                y= validateEmail(email);
+                console.log(y);
 
-                if(x==true) {
+                if(x==true && y==true) {
                     $('form').submit();
                 } else {
-                    $("#email_error").html("email already exists");
+                    if(y== false) {
+                        $("#email_error").html("Provide valid email");
+                    } else if( x== false) {
+                        $("#email_error").html("Email Already exists");
+                    }
                 }
             }
 		}
     });
+    
 	$(document).on('click',"#submit2",function(e){ //On submit of login,validation is done 
 		e.preventDefault();
 		var username=$("#username").val();
