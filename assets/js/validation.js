@@ -32,6 +32,11 @@ function validateEmail(email) {
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
 }
+
+function validateUsername(username) {
+    var re = /^[0-9a-zA-z]+$/;
+    return re.test(username);
+}
     
 $(document).ready(function(){
 	
@@ -126,17 +131,22 @@ $(document).ready(function(){
                 $("#upassword_error").html("Passwords doesn't match");
             } else {
                 checkemail();
-				var y;
+				var y,z;
                 y= validateEmail(email);
+                z= validateUsername(username);
                 console.log(y);
 
-                if(x==true && y==true) {
+                if(x==true && y==true && z == true) {
                     $('form').submit();
                 } else {
-                    if(y== false) {
-                        $("#email_error").html("Provide valid email");
-                    } else if( x== false) {
+                    if(x== false) {
                         $("#email_error").html("Email Already exists");
+                    } 
+                    if( z== false) {
+                        $("#username_error").html("username should contain only a-z A-z and  0-9");
+                    } 
+                    if( y== false) {
+                        $("#email_error").html("Provide valid email");
                     }
                 }
             }
